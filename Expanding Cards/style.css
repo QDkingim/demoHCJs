@@ -27,7 +27,7 @@ body {
     border-radius: 50px;
     color: #000;
     cursor: pointer;
-    flex: 1;
+    flex: 0.5;
     /* background-color: #bfc; */
     margin: 10px;
     position: relative;
@@ -41,4 +41,24 @@ body {
     left: 20px;
     margin: 0;
     opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
 }
